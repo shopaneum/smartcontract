@@ -8,7 +8,7 @@ pragma solidity ^0.4.4;
 //
 // Symbol      : SPN
 // Name        : Shopaneum
-// Total supply: 10000000000
+// Total supply: 100000000000
 // Decimals    : 18
 //
 //
@@ -87,12 +87,12 @@ contract Shopaneum is BEP20 {
     mapping (address => mapping (address => uint256)) allowed;    
 
     string public constant name = "Shopaneum";
-    string public constant symbol = "SHPM";
+    string public constant symbol = "SPN";
     uint public constant decimals = 18;
     
-    uint256 public totalSupply = 10000000000e18;
+    uint256 public totalSupply = 100000000000e18;
     uint256 public totalDistributed = 0;        
-    uint256 public tokensPerEth = 2250000e18;
+    uint256 public tokensPerEth = 22500000e18;
     uint256 public constant minContribution = 1 ether / 100; // 0.01 Ether
 
     event Transfer(address indexed _from, address indexed _to, uint256 _value);
@@ -122,7 +122,7 @@ contract Shopaneum is BEP20 {
     
     function Shopaneum () public {
         owner = msg.sender;
-        uint256 devTokens = 2750000000e18;
+        uint256 devTokens = 27500000000e18;
         distr(owner, devTokens);
     }
     
