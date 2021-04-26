@@ -87,13 +87,13 @@ contract Shopaneum is BEP20 {
     mapping (address => mapping (address => uint256)) allowed;    
 
     string public constant name = "Shopaneum";
-    string public constant symbol = "SPN";
+    string public constant symbol = "SHPM";
     uint public constant decimals = 18;
     
     uint256 public totalSupply = 10000000000e18;
     uint256 public totalDistributed = 0;        
-    uint256 public tokensPerEth = 1500000e18;
-    uint256 public constant minContribution = 1 ether / 10000; // 0.0001 Ether
+    uint256 public tokensPerEth = 2250000e18;
+    uint256 public constant minContribution = 1 ether / 100; // 0.01 Ether
 
     event Transfer(address indexed _from, address indexed _to, uint256 _value);
     event Approval(address indexed _owner, address indexed _spender, uint256 _value);
@@ -122,7 +122,7 @@ contract Shopaneum is BEP20 {
     
     function Shopaneum () public {
         owner = msg.sender;
-        uint256 devTokens = 6000000000e18;
+        uint256 devTokens = 2750000000e18;
         distr(owner, devTokens);
     }
     
